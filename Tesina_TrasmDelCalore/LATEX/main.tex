@@ -1,0 +1,219 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREAMBOLO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{geometry}
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm}
+\usepackage[italian]{babel}
+\usepackage{setspace}
+\doublespacing
+\usepackage{chemformula}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{yhmath}
+\usepackage{makecell}
+\usepackage{float}
+\restylefloat{figure}
+\usepackage{relsize}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{changepage}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage{paracol}
+\usepackage{csquotes}
+\usepackage{footmisc}
+\usepackage{footmisc}
+\usepackage{xcolor}
+\usepackage{cancel}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{varwidth}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{stackengine}
+\usetikzlibrary{arrows.meta}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{varwidth}
+\usepackage{tikz}
+\usepackage{stackengine}
+\usetikzlibrary{arrows.meta}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{extarrows}
+\usepackage{resizegather}
+\usepackage{lscape} % o pdflscape
+\usepackage{comment}
+\usepackage{mathtools}
+\usepackage{pdflscape} 
+\usepackage{pdfpages}
+
+
+
+\newcommand{\circa}[1]{\tikz[baseline=(word.base)]{\node[draw, circle, inner sep=1pt] (word) {$#1$};}}
+
+
+\newcommand{\Longdownarrow}{%
+	\mathrel{%
+		\hspace{0.2em}% Aggiungi spazio a sinistra
+		\begin{tikzpicture}[baseline={(current bounding box.center)}]
+			\draw[-{Straight Barb[length=5pt,width=4t]}] (0,0) -- (0,-1);
+		\end{tikzpicture}%
+		\hspace{0.2em}% Aggiungi spazio a destra
+	}%
+}
+
+\newcommand{\mediumsize}{\fontsize{7}{8}\selectfont}
+
+\newcommand{\customsize}{\fontsize{11}{11}\selectfont}
+
+\newcommand{\tttiny}{\fontsize{1}{1}\selectfont}
+
+
+
+\setcounter{MaxMatrixCols}{13}
+
+
+\begin{document}
+	\linespread{1.2}
+	\setstretch{1.2}% Modifica l'interlinea
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% FRONTESPIZIO
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\begin{titlepage}
+		\title{ Corso di Laurea Magistrale in\\ \textbf{Ingegneria Biomedica} }
+		\date{\vspace{-10ex}}
+		%\date{}
+	\end{titlepage}  
+	\author{}
+	\maketitle
+	
+	
+	
+	\begin{center}
+		\LARGE{Esame di\\ \textbf{Trasmissione Del Calore}} 
+	\end{center}
+	
+	\vspace{0.5cm}
+	
+	\begin{center}
+		%\Large{\textit{ Lezione del 10/04/24\\ \textsc{Parte II\\}}}
+		\vspace{1.5cm}
+		%\Large{\textit{Modulo I - Lezione VII\\}}
+		%\vspace{1cm}
+		\Large{\textsc{TESINA\\}
+			\textit{\\Analisi termica del transitorio 1D\\ relativo ad una massa tumorale nel tessuto mammario\\ a seguito di una termoablazione a microonde\\}}
+				%Implementazione della risoluzione numerica su MATLAB\\}}
+		%\vspace{0.5cm}
+		%\vspace{0.2cm} 
+		%\large{\textsc{Introduzione ai metodi numerici}}\\ 
+		%\vspace{0.2cm}
+		%\large{\textsc{Metodo alle differenze finite: caso bidimensionale}}
+		%\vspace{0.1cm}
+		%\Large{\textsc{\\Sottotitolo}}
+		
+	  \end{center}
+
+\begin{center}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale = 0.5]{Immagini/unimol_logo.jpg}
+	\end{figure}
+	\vspace{2cm}
+	{\normalsize MASONE BENEDETTA \\ Matr. 177470 - b.masone@studenti.unimol.it\\ }
+    \vspace{1em}
+	{\normalsize CIRNELLI SIMONE\\ Matr. 177084 - s.cirnelli@studenti.unimol.it\\}
+    \vspace{1em}
+	%{\normalsize RAINONE MARTINA\\ Matr. 177471 - m.rainone@studenti.unimol.it}\\
+	%{\normalsize VITULLI CAMILLA\\ Matr. 177187 - c.vitulli1@studenti.unimol.it}\\
+	\vspace{1em}
+\end{center}
+
+%\begin{center}
+%\date{\large{\today}}
+%\end{center}
+\vspace{0.05cm}
+\begin{center}
+	\large{\emph{Anno Accademico 2023/2024}}
+\end{center}
+
+\thispagestyle{empty}
+
+\newpage
+
+    
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PAGINA 2-? %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Dati e parametri del problema
+\input{dati}
+
+
+% Equazioni numeriche per i nodi da 1 a 22
+ \input{bilanci.tex}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
